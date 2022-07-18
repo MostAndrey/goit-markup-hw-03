@@ -119,6 +119,7 @@ p {
 .auth-navigation {
   display: flex;
   margin-left: auto;
+  padding: 0;
 }
 .auth-navigation .item + .item {
   margin-left: 50px;
@@ -132,7 +133,6 @@ p {
 /*  h1 */
 .header {
   color: var(--white-color);
-  background-color: var(--background-color);
 
   margin-bottom: 30px;
   margin-top: 0;
@@ -143,8 +143,25 @@ p {
   text-align: center;
   text-transform: uppercase;
 }
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-position: center;
+  background-size: cover;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/studio/backgound.jpg);
+}
 .section-hero {
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   text-align: center;
   padding: 200px 0 200px;
 }
@@ -400,6 +417,8 @@ img {
 }
 
 .address-header {
+  display: flex;
+  align-items: center;
   color: var(--grey-color);
   text-decoration: none;
   font-weight: 500;
@@ -408,6 +427,21 @@ img {
   letter-spacing: 0.02em;
 }
 
+.address-header::before {
+  content: "";
+
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+}
+.icon-email::before {
+  background-image: url(../images/icons.svg/envelope.svg);
+}
+.icon-tel::before {
+  width: 10px;
+  height: 16px;
+  background-image: url(../images/icons.svg/Vector.svg);
+}
 /* футер */
 .footer-list {
   font-style: normal;
