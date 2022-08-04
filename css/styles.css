@@ -185,8 +185,13 @@ p {
 .flex-item {
   width: 270px;
 }
-.flex-description {
-  margin: 0;
+
+.box {
+  width: 270px;
+  height: 120px;
+  padding: 25px 102px;
+  margin-bottom: 30px;
+  background-color: var(--section-color);
 }
 
 .flex-list {
@@ -208,8 +213,7 @@ p {
 
   text-align: center;
 }
-/* .img-saction {
-} */
+
 .images {
   display: flex;
   flex-wrap: wrap;
@@ -388,7 +392,7 @@ img {
   color: var(--grey-color);
   font-size: 16px;
   line-height: 1.18;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 
   text-align: center;
 }
@@ -415,7 +419,10 @@ img {
 .address-header:hover {
   color: var(--blue-color);
 }
-
+.address-header:focus,
+.address-header:hover {
+  color: var(--blue-color);
+}
 .address-header {
   display: flex;
   align-items: center;
@@ -437,6 +444,7 @@ img {
 .icon-email::before {
   background-image: url(../images/icons.svg/envelope.svg);
 }
+
 .icon-tel::before {
   width: 10px;
   height: 16px;
@@ -464,10 +472,4 @@ img {
 /* скрытый заголовок */
 .hidden {
   color: var(--footer-color);
-}
-
-.box {
-  box-sizing: border-box;
-  width: 370px;
-  border: #000000;
 }
